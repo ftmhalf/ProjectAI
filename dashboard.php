@@ -6,8 +6,9 @@
     }
 
     $db = mysqli_connect("localhost", "root", "", "ai_project");
-
-
+    $key = $_SESSION["uname"];
+    $data = mysqli_query($db, "SELECT * FROM data_mhs WHERE nim='$key'");
+    $data = mysqli_fetch_array($data);
 ?>
 
 
@@ -38,8 +39,8 @@
                 </div>
                 <div class="avartar-info">
                     <div class="avartar-text">
-                        <h4>Ralph Anderson</h4>
-                        <small>NIM</small>
+                        <h4><?php echo $data[1];?></h4>
+                        <small><?php echo strtoupper($data[0]);?></small>
                     </div>
                     <span class="las la-angle-double-down"></span>
                 </div>
@@ -78,7 +79,7 @@
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
                         Update
-                    </button>
+                </button>
 
                 <div id="myModal" class="modal">
                     <div class="start_btn">
@@ -143,7 +144,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Fakultas</h4>
-                            <h1>...</h1>
+                            <h1><?php echo $data[2];?></h1>
                         </div>
                     </div>
 
@@ -153,7 +154,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Departemen</h4>
-                            <h1>...</h1>
+                            <h1><?php echo $data[3];?></h1>
                         </div>
                     </div>
 
@@ -163,7 +164,12 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Semester</h4>
-                            <h1>...</h1>
+                            <?php
+                                if($data[4]==1) $sem = "1 (Satu)"; elseif ($data[4]==2)  $sem = "2 (Dua)"; elseif ($data[4]==3)  $sem = "3 (Tiga)" ; elseif ($data[4]==4)  $sem = "4 (Empat)";
+                                elseif ($data[4]==5)  $sem = "5 (Lima)"; elseif ($data[4]==6)  $sem = "6 (Enam)" ; elseif ($data[4]==7)  $sem = "7 (Tujuh)"; elseif ($data[4]==8)  $sem = "8 (Delapan)";
+                                else $sem = "DO Aja" ;
+                            ?>
+                            <h1><?php echo $sem;?></h1>
                         </div>
                     </div>
 
@@ -172,8 +178,8 @@
                             <span class="las la-certificate"></span>
                         </div>
                         <div class="analytic-info">
-                            <h4>IP</h4>
-                            <h1>...</h1>
+                            <h4>IPK</h4>
+                            <h1><?php echo $data[5];?></h1>
                         </div>
                     </div>
                 </div>
@@ -186,12 +192,12 @@
                         <div class="rev-content">
                             <img src="img/1.png" alt="" />
                             <div class="rev-info">
-                                <h3>Ralph Anderson</h3>
-                                <h1>NIM</h1>
+                                <h3><?php echo $data[1];?></h3>
+                                <h1><?php echo strtoupper($data[0]);?></h1>
                             </div>
                             <div class="rev-sum">
                                 <h4>IPK</h4>
-                                <h2>...</h2>
+                                <h2><?php echo $data[5];?></h2>
                             </div>
                         </div>
                     </div>

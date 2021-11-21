@@ -27,6 +27,7 @@
            if( $password === $psw ){
             global $id_akun;
                $_SESSION["id_akun"] = $id_akun;
+               $_SESSION['uname'] = $row['nim'];
                header("Location: index.php");
                exit;
            }
@@ -82,7 +83,7 @@
                         <input type="password" name="password" id="password" class="input" required>
                     </div>
                 </div>
-                <!-- <a href="#">Forgot Password?</a> -->
+                 <a href="#">Belum Punya Akun?</a>
                 <input type="submit" class="btn" name="login" value="Login">
             </form>
         </div>
