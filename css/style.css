@@ -114,6 +114,12 @@ img {
     align-items: center;
 }
 
+.avartar-text h4 {
+    justify-content: center;
+    font-size: medium;
+
+}
+
 .sidebar-menu li {
     margin-bottom: .2rem;
 }
@@ -262,9 +268,10 @@ main {
     font-size: .98rem;
 }
 
-.analytic-info h1 {
+.analytic-info p {
     color: var(--main-text);
-    font-weight: 600;
+    white-space: nowrap;
+    /* font-weight: 100; */
 }
 
 .analytic-info h1 small {
