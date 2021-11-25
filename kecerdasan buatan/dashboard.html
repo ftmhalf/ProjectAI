@@ -1,17 +1,3 @@
-<?php
-    session_start();
-    if( !isset($_SESSION["id_akun"]) ) {
-        header("Location: index.php");
-        exit;
-    }
-
-    $db = mysqli_connect("localhost", "root", "", "ai_project");
-    $key = $_SESSION["uname"];
-    $data = mysqli_query($db, "SELECT * FROM data_mhs WHERE nim='$key'");
-    $data = mysqli_fetch_array($data);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,8 +25,8 @@
                 </div>
                 <div class="avartar-info">
                     <div class="avartar-text">
-                        <h4><?php echo $data[1];?></h4>
-                        <small><?php echo strtoupper($data[0]);?></small>
+                        <h4>Ralph Anderson</h4>
+                        <small>NIM</small>
                     </div>
                     <span class="las la-angle-double-down"></span>
                 </div>
@@ -51,12 +37,6 @@
                         <a href="" class="active">
                             <span class="las la-adjust"></span>
                             <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="logout.php" tabindex="-1" aria-disabled="true" onclick="return confirm('Apakah Anda yakin ingin keluar?');" type="submit" class="active">
-                            <span class="las la-adjust"></span>
-                            <span>Logout</span>
                         </a>
                     </li>
                 </ul>
@@ -79,7 +59,7 @@
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
                         Update
-                </button>
+                    </button>
 
                 <div id="myModal" class="modal">
                     <div class="start_btn">
@@ -121,17 +101,17 @@
                         <div class="icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="complete_text">Submit your Response!</div>
+                        <div class="complete_text">Here is your graduate admission result!</div>
                         <div class="score_text">
                         </div>
                         <div class="buttons">
-                            <button class="restart">Submit</button>
+                            <button class="restart">Try again</button>
                             <button class="quit">Quit</button>
                         </div>
                     </div>
+
                 </div>
             </div>
-            
         </header>
 
         <main>
@@ -144,7 +124,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Fakultas</h4>
-                            <h1><?php echo $data[2];?></h1>
+                            <h1>...</h1>
                         </div>
                     </div>
 
@@ -154,7 +134,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Departemen</h4>
-                            <h1><?php echo $data[3];?></h1>
+                            <h1>...</h1>
                         </div>
                     </div>
 
@@ -164,12 +144,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Semester</h4>
-                            <?php
-                                if($data[4]==1) $sem = "1 (Satu)"; elseif ($data[4]==2)  $sem = "2 (Dua)"; elseif ($data[4]==3)  $sem = "3 (Tiga)" ; elseif ($data[4]==4)  $sem = "4 (Empat)";
-                                elseif ($data[4]==5)  $sem = "5 (Lima)"; elseif ($data[4]==6)  $sem = "6 (Enam)" ; elseif ($data[4]==7)  $sem = "7 (Tujuh)"; elseif ($data[4]==8)  $sem = "8 (Delapan)";
-                                else $sem = "DO Aja" ;
-                            ?>
-                            <h1><?php echo $sem;?></h1>
+                            <h1>...</h1>
                         </div>
                     </div>
 
@@ -178,8 +153,8 @@
                             <span class="las la-certificate"></span>
                         </div>
                         <div class="analytic-info">
-                            <h4>IPK</h4>
-                            <h1><?php echo $data[5];?></h1>
+                            <h4>IP</h4>
+                            <h1>...</h1>
                         </div>
                     </div>
                 </div>
@@ -192,12 +167,12 @@
                         <div class="rev-content">
                             <img src="img/1.png" alt="" />
                             <div class="rev-info">
-                                <h3><?php echo $data[1];?></h3>
-                                <h1><?php echo strtoupper($data[0]);?></h1>
+                                <h3>Ralph Anderson</h3>
+                                <h1>NIM</h1>
                             </div>
                             <div class="rev-sum">
                                 <h4>IPK</h4>
-                                <h2><?php echo $data[5];?></h2>
+                                <h2>...</h2>
                             </div>
                         </div>
                     </div>
@@ -232,62 +207,62 @@
     <script src="js/questions.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="js/script.js"></script>
+    < script src="js/script.js">
+        </script>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
 
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
 
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
                 modal.style.display = "none";
             }
-        }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js">
-    </script>
-    <script>
-        let ctx = document.querySelector("#revenueChart");
-        ctx.height = 43;
-        let revChart = new Chart(ctx, {
-            type: "line",
-            data: {
-                Labels: ["Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6", "Semester 7", "Semester 8"],
-                datasets: [{
-                    label: "IP",
-                    borderColor: "green",
-                    borderwidth: "3",
-                    backgroundColor: "rgba(235, 247, 245, 0.5)",
-                    data: [3.0, 3.3, 3.0, 3.8, 3.7, 3.7, 2.9, 3.8]
-                }]
 
-            },
-            options: {
-                responsive: true,
-                tooltips: {
-                    intersect: false,
-                    node: "index",
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
                 }
             }
-        });
-    </script>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js">
+        </script>
+        <script>
+            let ctx = document.querySelector("#revenueChart");
+            ctx.height = 43;
+            let revChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    Labels: ["Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6", "Semester 7", "Semester 8"],
+                    datasets: [{
+                        label: "IP",
+                        borderColor: "green",
+                        borderwidth: "3",
+                        backgroundColor: "rgba(235, 247, 245, 0.5)",
+                        data: [3.0, 3.3, 3.0, 3.8, 3.7, 3.7, 2.9, 3.8]
+                    }]
+
+                },
+                options: {
+                    responsive: true,
+                    tooltips: {
+                        intersect: false,
+                        node: "index",
+                    }
+                }
+            });
+        </script>
 </body>
 
 </html>
