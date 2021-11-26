@@ -1,9 +1,18 @@
+<?php
+  include('db.php');
+  session_start();
+  if( !isset($_SESSION["id_akun"]) ) 
+  {
+    header("Location: index.php");
+    exit;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prediction</title>
+    <title>Prediksi Penerimaan Program Magister</title>
     <link rel="stylesheet" href="css/style_predict.css" />
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
@@ -31,16 +40,12 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="predict.html" autocomplete="off">
-            <h1 class="title">Answer these question</h1>
+          <form action="predict.php" autocomplete="off">
+            <h1 class="title">Jawablah Beberapa Pertanyaan Berikut</h1>
             <ol class="text">
               <!-- D-IV?
                   S-1? -->
               <li class="li">Anda lulusan dari jenjang?</li>
-                <div class="inputGroup">
-                  <input id="satu1" name="satu" type="radio"/>
-                  <label for="satu1">D-3</label>
-                </div>
                 <div class="inputGroup">
                   <input id="satu2" name="satu" type="radio"/>
                   <label for="satu2">D-4</label>

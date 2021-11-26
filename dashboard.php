@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <title>Graduate Admission System</title>
+    <title>Prediksi Penerimaan Program Magister</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,7 +29,7 @@
         <div class="sidebar-container">
             <div class="brand">
                 <h2>
-                    <span class="lab la-staylinked"></span> GAES
+                    <span class="lab la-staylinked"></span>GAES
                 </h2>
             </div>
 
@@ -50,13 +50,13 @@
                     <li>
                         <a href="" class="active">
                             <span class="las la-adjust"></span>
-                            <span>Dashboard</span>
+                            <span>Beranda</span>
                         </a>
                     </li>
                     <li>
                         <a href="logout.php" tabindex="-1" aria-disabled="true" onclick="return confirm('Apakah Anda yakin ingin keluar?');" type="submit" class="active">
                             <span class="las la-adjust"></span>
-                            <span>Logout</span>
+                            <span>Keluar</span>
                         </a>
                     </li>
                 </ul>
@@ -71,19 +71,19 @@
                         <span class="las la-bars"></span>
                     </label>
                 <div class="header-title">
-                    <h1>Analytics</h1>
-                    <p>Display analytic about your study <span class="las la-chart-line"></span></p>
+                    <h1>Analisis</h1>
+                    <p>Prediksi penerimaan mahasiswa program magister<span class="las la-chart-line"></span></p>
                 </div>
             </div>
             <div class="header-action">
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
-                        <a href="predict.html" style="color: white;">Update Data Personal</a>
+                        <a href="data.php" style="color: white;">Update Data Personal</a>
                 </button>
 
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
-                        <a href="predict.html" style="color: white;">Predict</a>
+                        <a href="predict.php" style="color: white;">Prediksi</a>
                 </button>
             </div>
             
@@ -91,7 +91,7 @@
 
         <main>
             <section>
-                <h3 class="section-head">Overview</h3>
+                <h3 class="section-head">Rangkuman</h3>
                 <div class="analytics">
                     <div class="analytic">
                         <div class="analytic-icon">
@@ -143,7 +143,7 @@
             <section>
                 <div class="block-grid">
                     <div class="revenue-card">
-                        <h3 class="section-head">Profile</h3>
+                        <h3 class="section-head">Profil</h3>
                         <div class="rev-content">
                             <img src="img/1.png" alt="" />
                             <div class="rev-info">
@@ -152,12 +152,12 @@
                             </div>
                             <div class="rev-sum">
                                 <h4>Kesimpulan</h4>
-                                <h2><?php echo $data[5];?></h2>
+                                <p>Permohonan Magister Diterima</p>
                             </div>
                         </div>
                     </div>
                     <div class="graph-card">
-                        <h3 class="section-head">Graph</h3>
+                        <h3 class="section-head">Grafik</h3>
                         <div class="graph-content">
                             <div class="graph-head">
                                 <div class="icons-wrapper">

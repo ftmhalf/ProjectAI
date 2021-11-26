@@ -39,7 +39,7 @@
 <html>
 
 <head>
-    <title>Graduate Admission System</title>
+    <title>Prediksi Penerimaan Program Magister</title>
     <link rel="stylesheet" type="text/css" href="css/style_login.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -55,7 +55,7 @@
         <div class="login-content">
             <form action="index.php" method="POST">
                 <img src="img/undraw_profile_pic_ic-5-t.svg">
-                <h2 class="title">Welcome</h2>
+                <h2 class="title">Selamat Datang</h2>
                 <div class="text">
                             <?php if(isset($error)) : ?>
                                 <p style="font-style: italic;"> NIM atau Password Salah!</p>
@@ -75,7 +75,7 @@
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="div">
-                        <h5>Password</h5>
+                        <h5>Sandi</h5>
                         <input type="password" name="password" id="password" class="input" required>
                     </div>
                 </div>
