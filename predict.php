@@ -224,7 +224,7 @@
                 </div>
             </ol>
 
-            <button type="submit" value="Back" class="btn"><a href="dashboard.html" style="text-decoration: none">Back</a></button>
+            <button type="submit" value="Back" class="btn"><a href="dashboard.php" style="text-decoration: none">Back</a></button>
             <button type="submit" value="Send" class="btn" id="myBtn">Send</button>
           </form>
         </div>
