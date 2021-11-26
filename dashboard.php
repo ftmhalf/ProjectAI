@@ -40,7 +40,7 @@
                 <div class="avartar-info">
                     <div class="avartar-text">
                         <h4><?php echo $data[1];?></h4>
-                        <small><?php echo strtoupper($data[0]);?></small>
+                        <small style="padding-left: 10px;"> <?php echo strtoupper($data[0]);?></small>
                     </div>
                     <span class="las la-angle-double-down"></span>
                 </div>
@@ -76,6 +76,11 @@
                 </div>
             </div>
             <div class="header-action">
+                <button class="btn btn-main" id="myBtn">
+                        <span class="las la-edit"></span>
+                        <a href="predict.html" style="color: white;">Update Data Personal</a>
+                </button>
+
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
                         <a href="predict.html" style="color: white;">Predict</a>
@@ -146,7 +151,7 @@
                                 <h1><?php echo strtoupper($data[0]);?></h1>
                             </div>
                             <div class="rev-sum">
-                                <h4>IPK</h4>
+                                <h4>Kesimpulan</h4>
                                 <h2><?php echo $data[5];?></h2>
                             </div>
                         </div>

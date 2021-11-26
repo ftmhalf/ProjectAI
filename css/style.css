@@ -116,8 +116,8 @@ img {
 
 .avartar-text h4 {
     justify-content: center;
-    font-size: medium;
-
+    font-size: small;
+    padding-left: 10px;
 }
 
 .sidebar-menu li {
@@ -193,6 +193,7 @@ img {
 .btn-main {
     background: var(--color-main);
     color: #fff;
+    display: inline-block;
 }
 
 .main-content {
