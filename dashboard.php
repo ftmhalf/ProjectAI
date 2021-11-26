@@ -1,11 +1,11 @@
 <?php
+    include('db.php');
     session_start();
     if( !isset($_SESSION["id_akun"]) ) {
         header("Location: index.php");
         exit;
     }
 
-    $db = mysqli_connect("localhost", "root", "", "ai_project");
     $key = $_SESSION["uname"];
     $data = mysqli_query($db, "SELECT * FROM data_mhs WHERE nim='$key'");
     $data = mysqli_fetch_array($data);

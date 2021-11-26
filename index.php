@@ -1,23 +1,21 @@
 <?php
+    include('db.php');
     session_start();
     if( isset($_SESSION["id_akun"]) ) {
         header("Location: dashboard.php");
         exit;
     }
 
-    $db = mysqli_connect("localhost", "root", "", "ai_project");
-
     if(isset($_POST['login'])){
     
         // ambil data dari formulir
         $nim = $_POST['nim'];
-        $password = $_POST['password'];
-     
-        
+        $password = $_POST['password'];  
     
         // buat query
         global $db;
         $cekemail = mysqli_query($db, "SELECT * FROM akun WHERE nim = '$nim'");
+
         // apakah query simpan berhasil?
         if( mysqli_num_rows($cekemail) === 1 ) {
             global $password;
@@ -32,12 +30,10 @@
                exit;
            }
         }
-        
         $error = true;
     }   
 
 ?>
-
 
 <!DOCTYPE html>
 <html>
