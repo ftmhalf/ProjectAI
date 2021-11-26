@@ -78,58 +78,8 @@
             <div class="header-action">
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
-                        Update
+                        <a href="predict.html" style="color: white;">Predict</a>
                 </button>
-
-                <div id="myModal" class="modal">
-                    <div class="start_btn">
-                        <button>Start</button>
-                    </div>
-
-                    <div class="info_box">
-                        <div class="info-title"><span>Disclaimer</span></div>
-                        <div class="info-list">
-                            <div class="info">Prediction for your graduation admission status</div>
-                            <div class="info">Please answer all the question correctly for the better result</div>
-                        </div>
-                        <div class="buttons">
-                            <button class="quit">Exit</button>
-                            <button class="restart">Ok</button>
-                        </div>
-                    </div>
-
-                    <div class="quiz_box">
-                        <header>
-                            <div class="title">Graduate Admission Expert System</div>
-                            <span class="close">&times;</span>
-                        </header>
-                        <section>
-                            <div class="que_text">
-                            </div>
-                            <div class="option_list">
-                            </div>
-                        </section>
-
-                        <footer>
-                            <div class="total_que">
-                            </div>
-                            <button class="next_btn">Next Question</button>
-                        </footer>
-                    </div>
-
-                    <div class="result_box">
-                        <div class="icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="complete_text">Submit your Response!</div>
-                        <div class="score_text">
-                        </div>
-                        <div class="buttons">
-                            <button class="restart">Submit</button>
-                            <button class="quit">Quit</button>
-                        </div>
-                    </div>
-                </div>
             </div>
             
         </header>
@@ -144,7 +94,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Fakultas</h4>
-                            <h1><?php echo $data[2];?></h1>
+                            <p><?php echo $data[2];?></p>
                         </div>
                     </div>
 
@@ -154,7 +104,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>Departemen</h4>
-                            <h1><?php echo $data[3];?></h1>
+                            <p><?php echo $data[3];?></p>
                         </div>
                     </div>
 
@@ -169,7 +119,7 @@
                                 elseif ($data[4]==5)  $sem = "5 (Lima)"; elseif ($data[4]==6)  $sem = "6 (Enam)" ; elseif ($data[4]==7)  $sem = "7 (Tujuh)"; elseif ($data[4]==8)  $sem = "8 (Delapan)";
                                 else $sem = "DO Aja" ;
                             ?>
-                            <h1><?php echo $sem;?></h1>
+                            <p><?php echo $sem;?></p>
                         </div>
                     </div>
 
@@ -179,7 +129,7 @@
                         </div>
                         <div class="analytic-info">
                             <h4>IPK</h4>
-                            <h1><?php echo $data[5];?></h1>
+                            <p><?php echo $data[5];?></p>
                         </div>
                     </div>
                 </div>
@@ -227,40 +177,6 @@
     </div>
 
     <script src="js/main_dashboard.js"></script>
-
-    <!-- Inside this JavaScript file I 've inserted Questions and Options only -->
-    <script src="js/questions.js"></script>
-
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="js/script.js"></script>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js">
     </script>
     <script>
