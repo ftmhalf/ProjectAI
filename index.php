@@ -42,6 +42,7 @@
     <title>Prediksi Penerimaan Program Magister</title>
     <link rel="stylesheet" type="text/css" href="css/style_login.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/analytics.png"/>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

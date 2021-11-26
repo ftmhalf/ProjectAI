@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prediksi Penerimaan Program Magister</title>
     <link rel="stylesheet" href="css/style_predict.css" />
+    <link rel="shortcut icon" href="img/analytics.png"/>
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
