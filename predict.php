@@ -44,205 +44,184 @@
           <form action="predict.php" autocomplete="off">
             <h1 class="title">Jawablah Beberapa Pertanyaan Berikut</h1>
             <ol class="text">
-              <!-- D-IV?
-                  S-1? -->
-              <li class="li">Anda lulusan dari jenjang?</li>
+              <!-- D-IV? -->
+              <li class="li">Apakah alumni program D-IV?</li>
                 <div class="inputGroup">
-                  <input id="satu2" name="satu" type="radio"/>
-                  <label for="satu2">D-4</label>
+                  <input class="inp" id="satu1" name="satu" type="radio"/>
+                  <label for="satu1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="satu3" name="satu" type="radio"/>
-                  <label for="satu3">S-1</label>
+                  <input class="inp" id="satu2" name="satu" type="radio"/>
+                  <label for="satu2">Tidak</label>
                 </div>
               <br>
 
               <!-- Mendaftar Sains? -->
-              <li class="li">Program Magister apa yang anda daftarkan?</li>
+              <li class="li">Apakah mendaftar program studi pada bidang sains?</li>
                 <div class="inputGroup">
-                  <input id="dua1" name="dua" type="radio"/>
-                  <label for="dua1">Sains</label>
+                  <input class="inp" id="dua1" name="dua" type="radio"/>
+                  <label for="dua1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="dua2" name="dua" type="radio"/>
-                  <label for="dua2">Doktor</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="dua3" name="dua" type="radio"/>
-                  <label for="dua3">Profesional</label>
+                  <input class="inp" id="dua2" name="dua" type="radio"/>
+                  <label for="dua2">Tidak</label>
                 </div>
               <br>
 
-                <!-- Ijazah? -->
-              <li class="li">Apakah anda sudah memiliki ijazah S-1?</li>
+                <!-- S1? -->
+              <li class="li">Apakah alumni program S1?</li>
                 <div class="inputGroup">
-                  <input id="tiga1" name="tiga" type="radio"/>
-                  <label for="tiga1">Sudah</label>
+                  <input class="inp" id="tiga1" name="tiga" type="radio"/>
+                  <label for="tiga1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="tiga2" name="tiga" type="radio"/>
-                  <label for="tiga2">Belum</label>
-                </div>
-              <br>
-
-              <!-- Transkip? -->
-              <li class="li">Apakah anda sudah memiliki transkip S-1?</li>
-                <div class="inputGroup">
-                  <input id="empat1" name="empat" type="radio"/>
-                  <label for="empat1">Sudah</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="empat2" name="empat" type="radio"/>
-                  <label for="empat2">Belum</label>
+                  <input class="inp" id="tiga2" name="tiga" type="radio"/>
+                  <label for="tiga2">Tidak</label>
                 </div>
               <br>
 
-                <!-- Surat rekmendasi? -->
-              <li class="li">Apakah anda sudah memiliki surat rekomendasi dari dosen?</li>
+              <!-- ijaah? -->
+              <li class="li">Apakah memiliki ijazah?</li>
                 <div class="inputGroup">
-                  <input id="lima1" name="lima" type="radio"/>
-                  <label for="lima1">Sudah</label>
+                  <input class="inp" id="empat1" name="empat" type="radio"/>
+                  <label for="empat1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="lima2" name="lima" type="radio"/>
-                  <label for="lima2">Belum</label>
+                  <input class="inp" id="empat2" name="empat" type="radio"/>
+                  <label for="empat2">Tidak</label>
                 </div>
               <br>
 
-                <!-- Pemberi rekomendasi merupakan 3 dosen s2 -->
-              <li class="li">Apakah pemberi surat rekomendais meupakan 3 orang dosen dengan minimal studi S2?</li>
+                <!-- transkrip? -->
+              <li class="li">Apakah memiliki transkrip?</li>
                 <div class="inputGroup">
-                  <input id="enam1" name="enam" type="radio"/>
+                  <input class="inp" id="lima1" name="lima" type="radio"/>
+                  <label for="lima1">Ya</label>
+                </div>
+                <div class="inputGroup">
+                  <input class="inp" id="lima2" name="lima" type="radio"/>
+                  <label for="lima2">Tidak</label>
+                </div>
+              <br>
+
+                <!-- surat rekomendasi? -->
+              <li class="li">Apakah memiliki surat rekomendasi?</li>
+                <div class="inputGroup">
+                  <input class="inp" id="enam1" name="enam" type="radio"/>
                   <label for="enam1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="enam2" name="enam" type="radio"/>
+                  <input class="inp" id="enam2" name="enam" type="radio"/>
                   <label for="enam2">Bukan</label>
                 </div>
               <br>
 
-              <!-- Surat biaya? -->
-              <li class="li">Apakah anda sudah mengisi surat jaminan biaya?</li>
+              <!-- pemberi rekomendasi? -->
+              <li class="li">Apakah pemberi rekomendasi merupakan tiga orang dosen IPB dengan gelar minimal S2?</li>
                 <div class="inputGroup">
-                  <input id="tujuh1" name="tujuh" type="radio"/>
-                  <label for="tujuh1">Sudah</label>
+                  <input class="inp" id="tujuh1" name="tujuh" type="radio"/>
+                  <label for="tujuh1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="tujuh2" name="tujuh" type="radio"/>
-                  <label for="tujuh2">Belum</label>
+                  <input class="inp" id="tujuh2" name="tujuh" type="radio"/>
+                  <label for="tujuh2">Tidak</label>
                 </div>
               <br>
             
-                <!-- Sinopsis rencana penelitian? -->
-              <li class="li">Apakah anda sudah membuat sinopsis rencana penelitian?</li>
+                <!-- Surat biaya? -->
+              <li class="li">Apakah memiliki surat jaminan biaya?</li>
                 <div class="inputGroup">
-                  <input id="delapan1" name="delapan" type="radio"/>
-                  <label for="delapan1">Sudah</label>
+                  <input class="inp" id="delapan1" name="delapan" type="radio"/>
+                  <label for="delapan1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="delapan2" name="delapan" type="radio"/>
-                  <label for="delapan2">Belum</label>
+                  <input class="inp" id="delapan2" name="delapan" type="radio"/>
+                  <label for="delapan2">Tidak</label>
                 </div>
               <br>
 
-                <!-- Jalur khusus? -->
-              <li class="li">Apakah anda memilih jalur khusus?</li>
+                <!-- sinopsis? -->
+              <li class="li">Apakah memiliki sinopsis rencana penelitian?</li>
                 <div class="inputGroup">
-                  <input id="sembilan1" name="sembilan" type="radio"/>
+                  <input class="inp" id="sembilan1" name="sembilan" type="radio"/>
                   <label for="sembilan1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="sembilan2" name="sembilan" type="radio"/>
+                  <input class="inp" id="sembilan2" name="sembilan" type="radio"/>
                   <label for="sembilan2">Tidak</label>
                 </div>
               <br>
 
-              <!-- TPA? -->
-              <li class="li">Berapa nilai TPA anda?</li>
+              <!-- jalur khusus? -->
+              <li class="li">Apakah mendaftar dengan jalur kelas khusus?</li>
                 <div class="inputGroup">
-                  <input id="sepuluh1" name="sepuluh" type="radio"/>
-                  <label for="sepuluh1">>= 475</label>
+                  <input class="inp" id="sepuluh1" name="sepuluh" type="radio"/>
+                  <label for="sepuluh1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="sepuluh2" name="sepuluh" type="radio"/>
-                  <label for="sepuluh2">>= 450</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="sepuluh3" name="sepuluh" type="radio"/>
-                  <label for="sepuluh3">< 450</label>
+                  <input class="inp" id="sepuluh2" name="sepuluh" type="radio"/>
+                  <label for="sepuluh2">Tidak</label>
                 </div>
               <br>
 
               <!-- IPK? -->
-              <li class="li">Berapa nilai IPK anda?</li>
-                <div class="inputGroup">
-                  <input id="sebelas1" name="sebelas" type="radio"/>
-                  <label for="sebelas1"> > 2.5</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="sebelas2" name="sebelas" type="radio"/>
-                  <label for="sebelas2"> 2.0 - 2.5</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="sebelas3" name="sebelas" type="radio"/>
-                  <label for="sebelas3"> < 2.0</label>
-                </div>
+              <li class="li">Berapa nilai IPK pada program pendidikan sebelumnya?</li>
+              <div class="input-container">  
+                <input type="text" name="ipk" class="input" />
+              </div>
               <br>
 
 
-                <!-- TOEFL? -->
-              <li class="li">Berapa nilai TOEFL anda?</li>
-                <div class="inputGroup">
-                  <input id="duabelas1" name="duabelas" type="radio"/>
-                  <label for="duabelas1">> 550</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="duabelas2" name="duabelas" type="radio"/>
-                  <label for="duabelas2">> 500</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="duabelas3" name="duabelas" type="radio"/>
-                  <label for="duabelas3">< 500</label>
-                </div>
+                <!-- TPA? -->
+              <li class="li">Berapa nilai TPA pada program pendidikan sebelumnya?</li>
+              <div class="input-container">  
+                <input type="text" name="tpa" class="input" />
+              </div>
               <br>
 
 
                 <!-- Double Degree? -->
-              <li class="li">Apakah anda mendaftar ke program double degree?</li>
+              <li class="li">Apakah mendaftar untuk program double degree?</li>
                 <div class="inputGroup">
-                  <input id="tigabelas1" name="tigabelas" type="radio"/>
+                  <input class="inp" id="tigabelas1" name="tigabelas" type="radio"/>
                   <label for="tigabelas1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="tigabelas2" name="tigabelas" type="radio"/>
+                  <input class="inp" id="tigabelas2" name="tigabelas" type="radio"/>
                   <label for="tigabelas2">Tidak</label>
                 </div>
               <br>
 
-                <!-- jalur penelitian? -->
-              <li class="li">Apakah anda mendaftar ke jalur penelitian?</li>
-                <div class="inputGroup">
-                  <input id="empatbelas1" name="empatbelas" type="radio"/>
-                  <label for="empatbelas1">Ya</label>
-                </div>
-                <div class="inputGroup">
-                  <input id="empatbelas2" name="empatbelas" type="radio"/>
-                  <label for="empatbelas2">Tidak</label>
-                </div>
+                <!-- TOEFL? -->
+              <li class="li">Berapa nilai TOEFL ataupun sertifikat bahasa yang dimiliki?</li>
+              <div class="input-container">  
+                <input type="text" name="toefl" class="input" />
+              </div>
               <br>
 
+
+              <!-- jalur penelitian? -->
+              <li class="li">Apakah mendaftar untuk jalur penelitian?</li>
+                <div class="inputGroup">
+                  <input class="inp" id="limabelas1" name="limabelas" type="radio"/>
+                  <label for="limabelas1">Ya</label>
+                </div>
+                <div class="inputGroup">
+                  <input class="inp" id="limabelas2" name="limabelas" type="radio"/>
+                  <label for="limabelas2">Tidak</label>
+                </div>
+              <br>
 
               <!-- proposal penelitian? -->
-              <li class="li">Apakah anda sudah memiliki proposal penelitian?</li>
+              <li class="li">Apakah memiliki proposal penelitian?</li>
                 <div class="inputGroup">
-                  <input id="limabelas1" name="limabelas" type="radio"/>
-                  <label for="limabelas1">Sudah</label>
+                  <input class="inp" id="enambelas1" name="enambelas" type="radio"/>
+                  <label for="enambelas1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input id="limabelas2" name="limabelas" type="radio"/>
-                  <label for="limabelas2">Belum</label>
+                  <input class="inp" id="enambelas2" name="enambelas" type="radio"/>
+                  <label for="enambelas2">Tidak</label>
                 </div>
-              <br>
             </ol>
 
             <button type="submit" value="Back" class="btn"><a href="dashboard.html" style="text-decoration: none">Back</a></button>
