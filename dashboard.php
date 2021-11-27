@@ -45,7 +45,7 @@
         <div class="sidebar-container">
             <div class="brand">
                 <h2>
-                    <span class="lab la-staylinked"></span>GAES
+                    <span class="lab la-staylinked"></span>Pakar
                 </h2>
             </div>
 
