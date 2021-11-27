@@ -56,7 +56,7 @@
         <div class="login-content">
             <form action="index.php" method="POST">
                 <img src="img/undraw_profile_pic_ic-5-t.svg">
-                <h2 class="title">Selamat Datang</h2>
+                <h2 class="title" style="font-size:larger;">Masuk ke Akun Anda</h2>
                 <div class="text">
                             <?php if(isset($error)) : ?>
                                 <p style="font-style: italic;"> NIM atau Password Salah!</p>
@@ -80,7 +80,7 @@
                         <input type="password" name="password" id="password" class="input" required>
                     </div>
                 </div>
-                 <a href="#">Belum Punya Akun?</a>
+                 <a href="register.php">Belum Punya Akun?</a>
                 <input type="submit" class="btn" name="login" value="Login">
             </form>
         </div>

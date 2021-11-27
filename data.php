@@ -1,12 +1,29 @@
 <?php
   include('db.php');
   session_start();
-  if( !isset($_SESSION["id_akun"]) ) 
+  if(!isset($_SESSION["id_akun"]) ) 
   {
     header("Location: index.php");
     exit;
   }
+
+  if(isset($_POST['send']))
+  {
+    $nama=$_POST['nama']; $fak=$_POST['fakultas'];
+    $dept=$_POST['departemen']; $sem=$_POST['semester'];
+    $ipk=$_POST['ipk']; $ip1=$_POST['ip1'];
+    $ip2=$_POST['ip2']; $ip3=$_POST['ip3'];
+    $ip4=$_POST['ip4']; $ip5=$_POST['ip5'];
+    $ip6=$_POST['ip6']; $ip7=$_POST['ip7'];
+    $ip8=$_POST['ip8']; $key = $_SESSION["uname"];
+
+    $temp=mysqli_query($db, "SELECT * FROM data_mhs where nim='$key'");
+    if(mysqli_num_rows($temp)==0) mysqli_query($db, "INSERT INTO data_mhs VALUES ('$key', '$nama', '$fak', '$dept', '$sem', '$ipk', '$ip1', '$ip2', '$ip3', '$ip4', '$ip5', '$ip6', '$ip7', '$ip8')");
+    else mysqli_query($db, "UPDATE data_mhs SET nim='$key', nama_lengkap='$nama', fakultas='$fak', departemen='$dept', semester='$sem', ipk='$ipk', ip1='$ip1', ip2='$ip2', ip3='$ip3', ip4='$ip4', ip5='$ip5', ip6='$ip6', ip7='$ip7', ip8='$ip8' where nim='$key'");
+    header('location:dashboard.php');
+  }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,6 +48,9 @@
           
           <ol class="text">
             <li>Isi data dirimu dengan lengkap</li><br>
+            <li>Data diri akan dipergunakan sebagai basis informasi personal anda</li><br>
+            <li>Seluruh data diri harap diisi dengan baik dan sejujur-jujurnya dan tidak akan disebarkan ke pihak ketiga</li><br>
+            <li>Kolom untuk semester terbatas pada semester 8 dan kolom ip dan ipk terbatas pada rentang 0.0 - 4.0</li><br>
             <li>Setelah seluruh data diri telah terisi, klik send</li>
           </ol>
         </div>
@@ -39,7 +59,7 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="predict.php" autocomplete="off">
+          <form method="POST" action="data.php" autocomplete="off">
             <h1 class="title">Data Diri</h1>
             <ol class="text">
             <p class="li">Nama</p>
@@ -123,7 +143,7 @@
 
 
             <button type="submit" value="Back" class="btn"><a href="dashboard.php" style="text-decoration: none">Back</a></button>
-            <button type="submit" value="Send" class="btn" id="myBtn">Send</button>
+            <button type="submit" value="Send" name="send" class="btn" id="myBtn">Send</button>
           </form>
         </div>
       </div>

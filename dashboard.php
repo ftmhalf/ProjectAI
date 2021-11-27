@@ -5,10 +5,15 @@
         header("Location: index.php");
         exit;
     }
-
+    $check=1;
     $key = $_SESSION["uname"];
-    $data = mysqli_query($db, "SELECT * FROM data_mhs WHERE nim='$key'");
-    $data = mysqli_fetch_array($data);
+    $temp = mysqli_query($db, "SELECT * FROM data_mhs WHERE nim='$key'");
+    if(mysqli_num_rows($temp)!=0) $data = mysqli_fetch_array($temp);
+    else 
+    {
+        $check = 0;
+        $data=array('No Data', 'No Data', 'No Data', 'No Data', 'No Data', 'No Data');
+    }
 ?>
 
 
@@ -84,7 +89,21 @@
 
                 <button class="btn btn-main" id="myBtn">
                         <span class="las la-edit"></span>
-                        <a href="predict.php" style="color: white;">Prediksi</a>
+                        <?php 
+                        if($check==0)
+                        {
+                        ?>
+                            <a href="#" style="color: white;">Prediksi</a>
+                        <?php
+                            echo '<script type="text/javascript">alert("Lengkapi dahulu data anda!");</script>';
+                        }
+                        else 
+                        {
+                        ?>
+                            <a href="predict.php" style="color: white;">Prediksi</a>
+                        <?php
+                        }
+                        ?>
                 </button>
             </div>
             
@@ -123,7 +142,7 @@
                             <?php
                                 if($data[4]==1) $sem = "1 (Satu)"; elseif ($data[4]==2)  $sem = "2 (Dua)"; elseif ($data[4]==3)  $sem = "3 (Tiga)" ; elseif ($data[4]==4)  $sem = "4 (Empat)";
                                 elseif ($data[4]==5)  $sem = "5 (Lima)"; elseif ($data[4]==6)  $sem = "6 (Enam)" ; elseif ($data[4]==7)  $sem = "7 (Tujuh)"; elseif ($data[4]==8)  $sem = "8 (Delapan)";
-                                else $sem = "DO Aja" ;
+                                else $sem = "No Data" ;
                             ?>
                             <p><?php echo $sem;?></p>
                         </div>
