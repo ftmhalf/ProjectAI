@@ -6,6 +6,7 @@
     header("Location: index.php");
     exit;
   }
+  $nim = $_SESSION['uname'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +43,7 @@
           <span class="circle two"></span>
 
           <form method="POST" action="backend.php" autocomplete="off">
+          <input type="hidden" for="nim" name="nim" value="<?= $nim; ?>">
             <h1 class="title">Jawablah Beberapa Pertanyaan Berikut</h1>
             <ol class="text">
               <!-- D-IV? -->
@@ -165,10 +167,15 @@
               <br>
 
               <!-- IPK? -->
-              <li class="li">Berapa nilai IPK pada program pendidikan sebelumnya?</li>
-              <div class="input-container">  
-                <input type="text" name="ipk" class="input" />
-              </div>
+              <li class="li">Apakah IPK pada pendidikan sebelumnya berada pada rentang 2.00-2.50?</li>
+              <div class="inputGroup">
+                  <input class="inp" id="ipk1" name="ipk" value="ya" type="radio"/>
+                  <label for="ipk1">Ya</label>
+                </div>
+                <div class="inputGroup">
+                  <input class="inp" id="ipk2" name="ipk" value="tidak" type="radio"/>
+                  <label for="ipk2">Tidak</label>
+                </div>
               <br>
 
 

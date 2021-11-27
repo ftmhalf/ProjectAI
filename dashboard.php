@@ -8,11 +8,22 @@
     $check=1;
     $key = $_SESSION["uname"];
     $temp = mysqli_query($db, "SELECT * FROM data_mhs WHERE nim='$key'");
-    if(mysqli_num_rows($temp)!=0) $data = mysqli_fetch_array($temp);
+    if(mysqli_num_rows($temp)!=0) {
+        $data = mysqli_fetch_array($temp);
+        
+        $result = mysqli_query($db, "SELECT * FROM data_survey WHERE nim='$key'");
+        if(mysqli_num_rows($result)!=0) {
+            
+        $result = mysqli_fetch_assoc($result);
+        $kesimpulan = $result["kesimpulan"];
+        }
+        else $kesimpulan = "Belum Melakukan Tes Prediksi";
+    }
     else 
     {
         $check = 0;
         $data=array('No Data', 'No Data', 'No Data', 'No Data', 'No Data', 'No Data');
+        $kesimpulan = "Belum Melakukan Tes Prediksi";
     }
 ?>
 
@@ -171,7 +182,7 @@
                             </div>
                             <div class="rev-sum">
                                 <h4>Kesimpulan</h4>
-                                <p>Permohonan Magister Diterima</p>
+                                <p><?= $kesimpulan; ?></p>
                             </div>
                         </div>
                     </div>
