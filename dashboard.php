@@ -16,7 +16,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -184,15 +183,11 @@
                                     <div class="icon">
                                         <span class="las la-certificate text-success"></span>
                                     </div>
-                                </div>
-                                <div class="graph-select">
-                                    <select name="" id="">
-                                            <option value="">Semester</option>
-                                        </select>
+                                    <h2 style="color: #4b5876;">Trend Indeks Prestasi</h2>
                                 </div>
                             </div>
                             <div class="graph-board">
-                                <canvas id="revenueChart" width="100%"></canvas>
+                                <div id="revenueChart"></div>
                             </div>
                         </div>
                     </div>
@@ -200,34 +195,60 @@
             </section>
         </main>
     </div>
-
+    
+    <?php
+    $data_ip = mysqli_query($db, "SELECT ip1, ip2, ip3, ip4, ip5, ip6, ip7, ip8 FROM data_mhs WHERE nim='$key'");
+    if(mysqli_num_rows($data_ip)==0) $ip=array(0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00);
+    else 
+    {
+        $ip=array();
+        $data_ip=mysqli_fetch_array($data_ip);
+        for($i=0; $i<8; $i++)
+        {
+            $val=floatval($data_ip[$i]);
+            array_push($ip, number_format($val, 2));
+        }
+    }
+    ?>
     <script src="js/main_dashboard.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
-        let ctx = document.querySelector("#revenueChart");
-        ctx.height = 43;
-        let revChart = new Chart(ctx, {
-            type: "line",
-            data: {
-                Labels: ["Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6", "Semester 7", "Semester 8"],
-                datasets: [{
-                    label: "IP",
-                    borderColor: "green",
-                    borderwidth: "3",
-                    backgroundColor: "rgba(235, 247, 245, 0.5)",
-                    data: [3.0, 3.3, 3.0, 3.8, 3.7, 3.7, 2.9, 3.8]
-                }]
-
-            },
-            options: {
-                responsive: true,
-                tooltips: {
-                    intersect: false,
-                    node: "index",
+        var data_ip_siswa=<?php echo json_encode($ip);?> 
+        let data_chart = 
+        {
+            series : 
+            [
+                {
+                    name: "IP",
+                    data: data_ip_siswa, 
                 }
+            ], 
+            colors: ['#6ab04c'],
+            chart:
+            {
+                height: 370,
+                type: 'line',
+            },
+            dataLabels: 
+            {
+                enabled: false
+            },
+            stroke: 
+            {
+                curve: 'smooth'
+            },
+            xaxis: 
+            {
+                categories: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5', 'Semester 6', 'Semester 7', 'Semester 8'],
+            },
+            legend:
+            {
+                position: 'top'
             }
-        });
+        }
+
+        let show_chart = new ApexCharts(document.querySelector("#revenueChart"), data_chart)
+        show_chart.render()
     </script>
 </body>
 
