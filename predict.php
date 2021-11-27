@@ -47,11 +47,11 @@
               <!-- D-IV? -->
               <li class="li">Apakah alumni program D-IV?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="satu1" name="satu" value="Ya" type="radio"/>
+                  <input class="inp" id="satu1" name="satu" value="ya" type="radio"/>
                   <label for="satu1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="satu2" name="satu" value="Tidak" type="radio"/>
+                  <input class="inp" id="satu2" name="satu" value="tidak" type="radio"/>
                   <label for="satu2">Tidak</label>
                 </div>
               <br>
@@ -59,11 +59,11 @@
               <!-- Mendaftar Sains? -->
               <li class="li">Apakah mendaftar program studi pada bidang sains?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="dua1" name="dua" value="Ya" type="radio"/>
+                  <input class="inp" id="dua1" name="dua" value="ya" type="radio"/>
                   <label for="dua1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="dua2" name="dua" value="Tidak" type="radio"/>
+                  <input class="inp" id="dua2" name="dua" value="tidak" type="radio"/>
                   <label for="dua2">Tidak</label>
                 </div>
               <br>
@@ -71,11 +71,11 @@
                 <!-- S1? -->
               <li class="li">Apakah alumni program S1?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="tiga1" name="tiga" value="Ya" type="radio"/>
+                  <input class="inp" id="tiga1" name="tiga" value="ya" type="radio"/>
                   <label for="tiga1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="tiga2" name="tiga" value="Tidak" type="radio"/>
+                  <input class="inp" id="tiga2" name="tiga" value="tidak" type="radio"/>
                   <label for="tiga2">Tidak</label>
                 </div>
               <br>
@@ -83,11 +83,11 @@
               <!-- ijaah? -->
               <li class="li">Apakah memiliki ijazah?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="empat1" name="empat" value="Ya" type="radio"/>
+                  <input class="inp" id="empat1" name="empat" value="ya" type="radio"/>
                   <label for="empat1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="empat2" name="empat" value="Tidak" type="radio"/>
+                  <input class="inp" id="empat2" name="empat" value="tidak" type="radio"/>
                   <label for="empat2">Tidak</label>
                 </div>
               <br>
@@ -95,11 +95,11 @@
                 <!-- transkrip? -->
               <li class="li">Apakah memiliki transkrip?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="lima1" name="lima" value="Ya" type="radio"/>
+                  <input class="inp" id="lima1" name="lima" value="ya" type="radio"/>
                   <label for="lima1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="lima2" name="lima" value="Tidak" type="radio"/>
+                  <input class="inp" id="lima2" name="lima" value="tidak" type="radio"/>
                   <label for="lima2">Tidak</label>
                 </div>
               <br>
@@ -107,11 +107,11 @@
                 <!-- surat rekomendasi? -->
               <li class="li">Apakah memiliki surat rekomendasi?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="enam1" name="enam" value="Ya" type="radio"/>
+                  <input class="inp" id="enam1" name="enam" value="ya" type="radio"/>
                   <label for="enam1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="enam2" name="enam" value="Tidak" type="radio"/>
+                  <input class="inp" id="enam2" name="enam" value="tidak" type="radio"/>
                   <label for="enam2">Bukan</label>
                 </div>
               <br>
@@ -119,11 +119,11 @@
               <!-- pemberi rekomendasi? -->
               <li class="li">Apakah pemberi rekomendasi merupakan tiga orang dosen IPB dengan gelar minimal S2?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="tujuh1" name="tujuh" value="Ya" type="radio"/>
+                  <input class="inp" id="tujuh1" name="tujuh" value="ya" type="radio"/>
                   <label for="tujuh1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="tujuh2" name="tujuh" value="Tidak" type="radio"/>
+                  <input class="inp" id="tujuh2" name="tujuh" value="tidak" type="radio"/>
                   <label for="tujuh2">Tidak</label>
                 </div>
               <br>
@@ -131,11 +131,11 @@
                 <!-- Surat biaya? -->
               <li class="li">Apakah memiliki surat jaminan biaya?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="delapan1" name="delapan" value="Ya" type="radio"/>
+                  <input class="inp" id="delapan1" name="delapan" value="ya" type="radio"/>
                   <label for="delapan1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="delapan2" name="delapan" value="Tidak" type="radio"/>
+                  <input class="inp" id="delapan2" name="delapan" value="tidak" type="radio"/>
                   <label for="delapan2">Tidak</label>
                 </div>
               <br>
@@ -143,11 +143,11 @@
                 <!-- sinopsis? -->
               <li class="li">Apakah memiliki sinopsis rencana penelitian?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="sembilan1" name="sembilan" value="Ya" type="radio"/>
+                  <input class="inp" id="sembilan1" name="sembilan" value="ya" type="radio"/>
                   <label for="sembilan1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="sembilan2" name="sembilan" value="Tidak" type="radio"/>
+                  <input class="inp" id="sembilan2" name="sembilan" value="tidak" type="radio"/>
                   <label for="sembilan2">Tidak</label>
                 </div>
               <br>
@@ -155,11 +155,11 @@
               <!-- jalur khusus? -->
               <li class="li">Apakah mendaftar dengan jalur kelas khusus?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="sepuluh1" name="sepuluh" value="Ya" type="radio"/>
+                  <input class="inp" id="sepuluh1" name="sepuluh" value="ya" type="radio"/>
                   <label for="sepuluh1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="sepuluh2" name="sepuluh" value="Tidak" type="radio"/>
+                  <input class="inp" id="sepuluh2" name="sepuluh" value="tidak" type="radio"/>
                   <label for="sepuluh2">Tidak</label>
                 </div>
               <br>
@@ -183,11 +183,11 @@
                 <!-- Double Degree? -->
               <li class="li">Apakah mendaftar untuk program double degree?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="tigabelas1" name="tigabelas" value="Ya" type="radio"/>
+                  <input class="inp" id="tigabelas1" name="tigabelas" value="ya" type="radio"/>
                   <label for="tigabelas1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="tigabelas2" name="tigabelas" value="Tidak" type="radio"/>
+                  <input class="inp" id="tigabelas2" name="tigabelas" value="tidak" type="radio"/>
                   <label for="tigabelas2">Tidak</label>
                 </div>
               <br>
@@ -203,11 +203,11 @@
               <!-- jalur penelitian? -->
               <li class="li">Apakah mendaftar untuk jalur penelitian?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="limabelas1" name="limabelas" value="Ya" type="radio"/>
+                  <input class="inp" id="limabelas1" name="limabelas" value="ya" type="radio"/>
                   <label for="limabelas1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="limabelas2" name="limabelas" value="Tidak" type="radio"/>
+                  <input class="inp" id="limabelas2" name="limabelas" value="tidak" type="radio"/>
                   <label for="limabelas2">Tidak</label>
                 </div>
               <br>
@@ -215,11 +215,11 @@
               <!-- proposal penelitian? -->
               <li class="li">Apakah memiliki proposal penelitian?</li>
                 <div class="inputGroup">
-                  <input class="inp" id="enambelas1" name="enambelas" value="Ya" type="radio"/>
+                  <input class="inp" id="enambelas1" name="enambelas" value="ya" type="radio"/>
                   <label for="enambelas1">Ya</label>
                 </div>
                 <div class="inputGroup">
-                  <input class="inp" id="enambelas2" name="enambelas" value="Tidak" type="radio"/>
+                  <input class="inp" id="enambelas2" name="enambelas" value="tidak" type="radio"/>
                   <label for="enambelas2">Tidak</label>
                 </div>
             </ol>
