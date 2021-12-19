@@ -140,16 +140,18 @@ if(isset($_POST['send']))
     $kesimpulan = "Permohonan Magister Tidak Diterima";
     
     //rule32
-    elseif($diploma=='tidak' && $sarjana=='ya' && $ijazah=='ya' && $transkrip=='ya' && $rekomendasi=='tidak')
+    elseif($diploma=='tidak' && $sarjana =='ya' && $ijazah=='ya' && $transkrip=='ya' && $rekomendasi=='tidak')
     $kesimpulan = "Permohonan Magister Tidak Diterima";
     
     //rule33
-    elseif($diploma=='tidak' && $sarjana=='ya' && $ijazah=='ya' && $transkrip=='tidak')
+    elseif($diploma=='tidak' && $sarjana =='ya' && $ijazah=='ya' && $transkrip=='tidak')
     $kesimpulan = "Permohonan Magister Tidak Diterima";
     
     //rule34
-    elseif($diploma=='tidak' && $sarjana=='ya' && $ijazah=='tidak')
+    elseif($diploma =='tidak' && $sarjana =='ya' && $ijazah=='tidak')
     $kesimpulan = "Permohonan Magister Tidak Diterima";
+
+    else $kesimpulan = "Permohonan Magister Tidak Diterima";
 
     $result = mysqli_query($db, "SELECT * FROM data_survey WHERE nim = '$nim'");
     if( mysqli_num_rows($result) == 0 ) {
